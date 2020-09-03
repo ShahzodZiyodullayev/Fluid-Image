@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: 0.2s linear;
+}
+
+body.dark{
+    background-color: #292c35;
+}
+
+body.dark h3{
+    color: #fff;
+}
+
+h3{
+    padding: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    transition: 2s;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.label{
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    border-radius: 50px;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+}
+
+.ball{
+    background-color: #fff;
+    position: absolute;
+    height: 22px;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    border-radius: 50%;
+    transition: transform .2s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+
+.fa-moon{
+    color: rgb(42, 181, 228);
+}
+
+.fa-sun{
+    color: yellow;
+}
